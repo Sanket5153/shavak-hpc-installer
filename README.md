@@ -1,9 +1,5 @@
 **Run the main installer script to begin the automated setup:**
 
-### 👨‍💻 Author
-
-**Sanket Thakare**  
-
 ./main_installer.sh
 
 **You will be greeted with:**
