@@ -6,16 +6,16 @@ source "$SPACK_DIR/share/spack/setup-env.sh"
 
 COMPILER="gcc"
 
-echo "📦 Checking and installing HPC apps using Spack..."
+echo "Checking and installing HPC apps using Spack..."
 
 
 # --------- GROMACS ----------
 echo " "
 echo "Checking for GROMACS..."
 if spack find gromacs | grep -q gromacs; then
-    echo "✅ GROMACS is already installed."
+    echo "GROMACS is already installed."
 else
-    echo "❌ GROMACS not found. Installing..."
+    echo "GROMACS not found. Installing..."
     spack install -j40 gromacs%$COMPILER
 fi
 
@@ -24,9 +24,9 @@ sleep
 echo " "
 echo "Checking for lammps..."
 if spack find lammps | grep -q lammps; then
-    echo "✅ Lammps is already installed."
+    echo "Lammps is already installed."
 else
-    echo "❌ Lammps not found. Installing..."
+    echo "Lammps not found. Installing..."
     spack install -j40 lammps%$COMPILER
 fi
 
@@ -35,9 +35,9 @@ sleep
 echo " "
 echo "Checking for NAMD..."
 if spack find namd | grep -q namd; then
-    echo "✅ namd is already installed."
+    echo "Namd is already installed."
 else
-    echo "❌ namd not found. Installing..."
+    echo "Namd not found. Installing..."
     makdir namd
     cd namd
     wget https://www.ks.uiuc.edu/Research/namd/2.14/download/946183/NAMD_2.14_Source.tar.gz
@@ -51,9 +51,9 @@ sleep 1
 echo " "
 echo "Checking for OpenFOAM..."
 if spack find openfoam | grep -q openfoam; then
-    echo "✅ OpenFOAM is already installed."
+    echo "OpenFOAM is already installed."
 else
-    echo "❌ OpenFOAM not found. Installing..."
+    echo "OpenFOAM not found. Installing..."
     spack install -j40 openfoam%$COMPILER+vtk+paraview
 fi
 
@@ -62,9 +62,9 @@ echo " "
 sleep 1
 echo "Checking for WRF..."
 if spack find wrf | grep -q wrf; then
-    echo "✅ WRF is already installed."
+    echo "WRF is already installed."
 else
-    echo "❌ WRF not found. Installing..."
+    echo "WRF not found. Installing..."
     spack install -j40 wrf%$COMPILER
 fi
 
@@ -76,13 +76,13 @@ echo " "
 sleep 1
 echo "Checking for nwchem..."
 if spack find nwchem | grep -q nwchem; then
-    echo "✅ nwchem is already installed."
+    echo "Nwchem is already installed."
 else
-    echo "❌ nwchem not found. Installing..."
+    echo "Nwchem not found. Installing..."
     spack install -j40 nwchem%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 
 # --------- abinit ----------
@@ -90,26 +90,26 @@ echo " "
 sleep 1
 echo "Checking for abinit..."
 if spack find abinit | grep -q abinit; then
-    echo "✅ abinit is already installed."
+    echo "Abinit is already installed."
 else
-    echo "❌ abinit not found. Installing..."
+    echo "Abinit not found. Installing..."
     spack install -j40 abinit%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 # --------- cp2k ----------
 echo " "
 sleep 1
 echo "Checking for cp2k..."
 if spack find cp2k | grep -q cp2k; then
-    echo "✅ cp2k is already installed."
+    echo "cp2k is already installed."
 else
-    echo "❌ cp2k not found. Installing..."
+    echo "cp2k not found. Installing..."
     spack install -j40 cp2k%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 # --------- hmmer ----------
 
@@ -117,13 +117,13 @@ echo " "
 sleep 1
 echo "Checking for hmmer..."
 if spack find hmmer | grep -q hmmer; then
-    echo "✅ hmmer is already installed."
+    echo "hmmer is already installed."
 else
-    echo "❌ hmmer not found. Installing..."
+    echo "hmmer not found. Installing..."
     spack install -j40 hmmer%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 # --------- mummer ----------
 
@@ -131,13 +131,13 @@ echo " "
 sleep 1
 echo "Checking for mummer..."
 if spack find mummer | grep -q mummer; then
-    echo "✅ mummer is already installed."
+    echo "mummer is already installed."
 else
-    echo "❌ mummer not found. Installing..."
+    echo "mummer not found. Installing..."
     spack install -j40 mummer%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 # --------- Quantum-espresso ----------
 
@@ -145,13 +145,13 @@ echo " "
 sleep 1
 echo "Checking for quantum-espresso..."
 if spack find quantum-espresso | grep -q quantum-espresso; then
-    echo "✅ quantum-espresso is already installed."
+    echo "quantum-espresso is already installed."
 else
-    echo "❌ quantum-espresso not found. Installing..."
+    echo "quantum-espresso not found. Installing..."
     spack install -j40 quantum-espresso%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
 
 # --------- HPL ----------
 
@@ -159,10 +159,10 @@ echo " "
 sleep 1
 echo "Checking for HPL..."
 if spack find hpl | grep -q hpl; then
-    echo "✅ HPL is already installed."
+    echo "HPL is already installed."
 else
-    echo "❌ HPL not found. Installing..."
+    echo "HPL not found. Installing..."
     spack install -j40 hpl%$COMPILER
 fi
 
-echo "🏁 Done."
+echo "Done."
